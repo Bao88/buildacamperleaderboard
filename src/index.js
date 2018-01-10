@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./css/index.css";
-import registerServiceWorker from './js/registerServiceWorker';
-
-
 
 class Data extends React.Component {
      state = {list: []};
@@ -66,4 +63,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('content'));
-registerServiceWorker();
