@@ -8,16 +8,11 @@ import registerServiceWorker from './js/registerServiceWorker';
 class Data extends React.Component {
      state = {list: []};
     loadData(which) {
-        // console.log("called");
         var url = which ? "https://fcctop100.herokuapp.com/api/fccusers/top/recent":"https://fcctop100.herokuapp.com/api/fccusers/top/alltime";
         fetch(url) 
-        // fetch("https://randomuser.me/api/?results=100")
         .then((resp) => resp.json())
         .then(data => {
-            var array = data;
-            console.log(array);
-            this.setState({list: array});
-            // console.log(array.results[0]);
+            this.setState({list: data});
         })
         .catch(function(error){
             console.log(error);
