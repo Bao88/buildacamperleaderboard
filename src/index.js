@@ -44,16 +44,6 @@ class Data extends React.Component {
 
 class App extends React.Component {
     state = {bool: true};
-
-    loadRecent = () => {
-        this.setState({bool: true});
-        console.log("load recent");
-    }
-
-    loadAlltime = () => {
-        this.setState({bool: false});
-        console.log("load alltime");
-    }
     render(){
         const titles = {
             width: "580px"
@@ -79,7 +69,6 @@ class App extends React.Component {
         );
     }
 }
-
 
 ReactDOM.render(<App />, document.getElementById('content'));
 registerServiceWorker();
